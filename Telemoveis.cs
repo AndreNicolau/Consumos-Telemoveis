@@ -190,5 +190,14 @@ namespace Consumos_Telemóveis
             }
             
         }
+
+        private void tsbValoresPorDefeito_ButtonClick(object sender, EventArgs e)
+        {
+            int dadosMoveisPorDefeito = Int32.Parse(txtDadosPorDefeito.Text);
+            int minutosPorDefeito = Int32.Parse(txtMinutosPorDefeito.Text);
+
+            txtMinutos.Text = minutosPorDefeito.ToString();
+            txtDadosMoveis.Text = dadosMoveisPorDefeito.ToString();
+        }
     }
 }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Telemoveis));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.idTelemovelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,6 +48,8 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.txtProcurar = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsbValoresPorDefeito = new System.Windows.Forms.ToolStripSplitButton();
             this.txtId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -63,6 +66,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.telemoveisTableAdapter = new Consumos_Telemóveis.DbConsumosTelemoveisDataSetTableAdapters.telemoveisTableAdapter();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.txtDadosPorDefeito = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.txtMinutosPorDefeito = new System.Windows.Forms.ToolStripTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.telemoveisBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbConsumosTelemoveisDataSet)).BeginInit();
@@ -74,7 +81,8 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -92,7 +100,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1160, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(1160, 228);
             this.dataGridView1.TabIndex = 9;
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
@@ -109,30 +117,35 @@
             this.nomeDataGridViewTextBoxColumn.DataPropertyName = "nome";
             this.nomeDataGridViewTextBoxColumn.HeaderText = "Nome";
             this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
+            this.nomeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // emailDataGridViewTextBoxColumn
             // 
             this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
             this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
             this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // numeroTelemovelDataGridViewTextBoxColumn
             // 
             this.numeroTelemovelDataGridViewTextBoxColumn.DataPropertyName = "numeroTelemovel";
             this.numeroTelemovelDataGridViewTextBoxColumn.HeaderText = "Número Telemóvel";
             this.numeroTelemovelDataGridViewTextBoxColumn.Name = "numeroTelemovelDataGridViewTextBoxColumn";
+            this.numeroTelemovelDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // minutosDataGridViewTextBoxColumn
             // 
             this.minutosDataGridViewTextBoxColumn.DataPropertyName = "minutos";
             this.minutosDataGridViewTextBoxColumn.HeaderText = "Minutos";
             this.minutosDataGridViewTextBoxColumn.Name = "minutosDataGridViewTextBoxColumn";
+            this.minutosDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // dadosMoveisDataGridViewTextBoxColumn
             // 
             this.dadosMoveisDataGridViewTextBoxColumn.DataPropertyName = "dadosMoveis";
             this.dadosMoveisDataGridViewTextBoxColumn.HeaderText = "Dados Móveis";
             this.dadosMoveisDataGridViewTextBoxColumn.Name = "dadosMoveisDataGridViewTextBoxColumn";
+            this.dadosMoveisDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // telemoveisBindingSource
             // 
@@ -156,7 +169,9 @@
             this.tsbCancelar,
             this.toolStripSeparator1,
             this.toolStripLabel1,
-            this.txtProcurar});
+            this.txtProcurar,
+            this.toolStripSeparator2,
+            this.tsbValoresPorDefeito});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1184, 38);
@@ -238,6 +253,24 @@
             this.txtProcurar.Name = "txtProcurar";
             this.txtProcurar.Size = new System.Drawing.Size(100, 38);
             this.txtProcurar.TextChanged += new System.EventHandler(this.txtProcurar_TextChanged);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 38);
+            // 
+            // tsbValoresPorDefeito
+            // 
+            this.tsbValoresPorDefeito.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.tsbValoresPorDefeito.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1,
+            this.toolStripMenuItem2});
+            this.tsbValoresPorDefeito.Image = ((System.Drawing.Image)(resources.GetObject("tsbValoresPorDefeito.Image")));
+            this.tsbValoresPorDefeito.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbValoresPorDefeito.Name = "tsbValoresPorDefeito";
+            this.tsbValoresPorDefeito.Size = new System.Drawing.Size(176, 35);
+            this.tsbValoresPorDefeito.Text = "Inserir valores por defeito";
+            this.tsbValoresPorDefeito.ButtonClick += new System.EventHandler(this.tsbValoresPorDefeito_ButtonClick);
             // 
             // txtId
             // 
@@ -369,9 +402,9 @@
             // 
             // button1
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGreen;
-            this.button1.Location = new System.Drawing.Point(530, 406);
+            this.button1.Location = new System.Drawing.Point(527, 484);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(125, 32);
             this.button1.TabIndex = 15;
@@ -381,7 +414,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtId);
             this.groupBox1.Controls.Add(this.label2);
@@ -395,7 +428,7 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.txtEmail);
-            this.groupBox1.Location = new System.Drawing.Point(331, 197);
+            this.groupBox1.Location = new System.Drawing.Point(331, 275);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(523, 203);
             this.groupBox1.TabIndex = 17;
@@ -404,6 +437,36 @@
             // telemoveisTableAdapter
             // 
             this.telemoveisTableAdapter.ClearBeforeFill = true;
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.txtDadosPorDefeito});
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(186, 22);
+            this.toolStripMenuItem1.Text = "Dados móveis";
+            // 
+            // txtDadosPorDefeito
+            // 
+            this.txtDadosPorDefeito.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.txtDadosPorDefeito.Name = "txtDadosPorDefeito";
+            this.txtDadosPorDefeito.Size = new System.Drawing.Size(100, 27);
+            this.txtDadosPorDefeito.Text = "5242880";
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.txtMinutosPorDefeito});
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(186, 22);
+            this.toolStripMenuItem2.Text = "Minutos chamadas";
+            // 
+            // txtMinutosPorDefeito
+            // 
+            this.txtMinutosPorDefeito.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.txtMinutosPorDefeito.Name = "txtMinutosPorDefeito";
+            this.txtMinutosPorDefeito.Size = new System.Drawing.Size(100, 27);
+            this.txtMinutosPorDefeito.Text = "5000";
             // 
             // Telemoveis
             // 
@@ -470,6 +533,12 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStripTextBox txtProcurar;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripSplitButton tsbValoresPorDefeito;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripTextBox txtDadosPorDefeito;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripTextBox txtMinutosPorDefeito;
     }
 }
 
