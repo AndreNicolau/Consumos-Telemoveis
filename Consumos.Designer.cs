@@ -56,11 +56,9 @@
             this.txtNumero = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtMes = new System.Windows.Forms.TextBox();
             this.txtConsumoMinutos = new System.Windows.Forms.TextBox();
             this.txtConsumoDadosMoveis = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.consumosTableAdapter = new Consumos_Telemóveis.DbConsumosTelemoveisDataSetTableAdapters.consumosTableAdapter();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -72,6 +70,8 @@
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnEnviarEmail = new System.Windows.Forms.Button();
+            this.consumosTableAdapter = new Consumos_Telemóveis.DbConsumosTelemoveisDataSetTableAdapters.consumosTableAdapter();
+            this.cbMes = new System.Windows.Forms.ComboBox();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.consumosBindingSource)).BeginInit();
@@ -158,7 +158,9 @@
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -175,8 +177,9 @@
             this.dataGridView1.DataSource = this.consumosBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 41);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1160, 174);
+            this.dataGridView1.Size = new System.Drawing.Size(1160, 237);
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
@@ -219,6 +222,7 @@
             this.mesDataGridViewTextBoxColumn.FillWeight = 30.92783F;
             this.mesDataGridViewTextBoxColumn.HeaderText = "Mês";
             this.mesDataGridViewTextBoxColumn.Name = "mesDataGridViewTextBoxColumn";
+            this.mesDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // consumoMinutosDataGridViewTextBoxColumn
             // 
@@ -226,6 +230,7 @@
             this.consumoMinutosDataGridViewTextBoxColumn.FillWeight = 30.92783F;
             this.consumoMinutosDataGridViewTextBoxColumn.HeaderText = "Consumo Minutos";
             this.consumoMinutosDataGridViewTextBoxColumn.Name = "consumoMinutosDataGridViewTextBoxColumn";
+            this.consumoMinutosDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // consumoDadosMoveisDataGridViewTextBoxColumn
             // 
@@ -233,6 +238,7 @@
             this.consumoDadosMoveisDataGridViewTextBoxColumn.FillWeight = 30.92783F;
             this.consumoDadosMoveisDataGridViewTextBoxColumn.HeaderText = "Consumo Dados Móveis";
             this.consumoDadosMoveisDataGridViewTextBoxColumn.Name = "consumoDadosMoveisDataGridViewTextBoxColumn";
+            this.consumoDadosMoveisDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // consumosBindingSource
             // 
@@ -341,20 +347,14 @@
             this.label7.TabIndex = 14;
             this.label7.Text = "Nome";
             // 
-            // txtMes
-            // 
-            this.txtMes.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.consumosBindingSource, "mes", true));
-            this.txtMes.Location = new System.Drawing.Point(6, 45);
-            this.txtMes.Name = "txtMes";
-            this.txtMes.Size = new System.Drawing.Size(100, 26);
-            this.txtMes.TabIndex = 15;
-            // 
             // txtConsumoMinutos
             // 
             this.txtConsumoMinutos.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.consumosBindingSource, "consumoMinutos", true));
+            this.txtConsumoMinutos.ForeColor = System.Drawing.Color.Black;
             this.txtConsumoMinutos.Location = new System.Drawing.Point(6, 98);
             this.txtConsumoMinutos.MaxLength = 20;
             this.txtConsumoMinutos.Name = "txtConsumoMinutos";
+            this.txtConsumoMinutos.ReadOnly = true;
             this.txtConsumoMinutos.Size = new System.Drawing.Size(100, 26);
             this.txtConsumoMinutos.TabIndex = 16;
             this.txtConsumoMinutos.Text = "0";
@@ -366,6 +366,7 @@
             this.txtConsumoDadosMoveis.Location = new System.Drawing.Point(6, 150);
             this.txtConsumoDadosMoveis.MaxLength = 20;
             this.txtConsumoDadosMoveis.Name = "txtConsumoDadosMoveis";
+            this.txtConsumoDadosMoveis.ReadOnly = true;
             this.txtConsumoDadosMoveis.Size = new System.Drawing.Size(100, 26);
             this.txtConsumoDadosMoveis.TabIndex = 17;
             this.txtConsumoDadosMoveis.Text = "0";
@@ -380,13 +381,9 @@
             this.label8.TabIndex = 18;
             this.label8.Text = "Kb";
             // 
-            // consumosTableAdapter
-            // 
-            this.consumosTableAdapter.ClearBeforeFill = true;
-            // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.groupBox1.Controls.Add(this.txtEmail);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label1);
@@ -397,7 +394,7 @@
             this.groupBox1.Controls.Add(this.txtIdTelemovel);
             this.groupBox1.Controls.Add(this.txtNome);
             this.groupBox1.Controls.Add(this.txtNumero);
-            this.groupBox1.Location = new System.Drawing.Point(221, 221);
+            this.groupBox1.Location = new System.Drawing.Point(221, 284);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(244, 241);
             this.groupBox1.TabIndex = 19;
@@ -440,13 +437,13 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.txtLimiteConsumoDadosMoveis);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.txtLimiteConsumoMinutos);
-            this.groupBox2.Location = new System.Drawing.Point(471, 221);
+            this.groupBox2.Location = new System.Drawing.Point(471, 284);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(243, 134);
             this.groupBox2.TabIndex = 20;
@@ -480,16 +477,16 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.groupBox3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.groupBox3.Controls.Add(this.cbMes);
             this.groupBox3.Controls.Add(this.btnEnviarEmail);
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.label8);
-            this.groupBox3.Controls.Add(this.txtMes);
             this.groupBox3.Controls.Add(this.txtConsumoDadosMoveis);
             this.groupBox3.Controls.Add(this.txtConsumoMinutos);
-            this.groupBox3.Location = new System.Drawing.Point(720, 221);
+            this.groupBox3.Location = new System.Drawing.Point(720, 284);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(243, 241);
             this.groupBox3.TabIndex = 21;
@@ -506,6 +503,33 @@
             this.btnEnviarEmail.Text = "Enviar Email";
             this.btnEnviarEmail.UseVisualStyleBackColor = true;
             this.btnEnviarEmail.Click += new System.EventHandler(this.btnEnviarEmail_Click);
+            // 
+            // consumosTableAdapter
+            // 
+            this.consumosTableAdapter.ClearBeforeFill = true;
+            // 
+            // cbMes
+            // 
+            this.cbMes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cbMes.FormattingEnabled = true;
+            this.cbMes.Items.AddRange(new object[] {
+            "janeiro",
+            "fevereiro",
+            "março",
+            "abril",
+            "maio",
+            "junho",
+            "julho",
+            "agosto",
+            "setembro",
+            "outubro",
+            "novembro",
+            "dezembro"});
+            this.cbMes.Location = new System.Drawing.Point(10, 43);
+            this.cbMes.Name = "cbMes";
+            this.cbMes.Size = new System.Drawing.Size(100, 28);
+            this.cbMes.TabIndex = 22;
+            this.cbMes.Text = "janeiro";
             // 
             // Consumos
             // 
@@ -559,7 +583,6 @@
         private System.Windows.Forms.TextBox txtNumero;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtMes;
         private System.Windows.Forms.TextBox txtConsumoMinutos;
         private System.Windows.Forms.TextBox txtConsumoDadosMoveis;
         private System.Windows.Forms.Label label8;
@@ -584,5 +607,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn consumoMinutosDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn consumoDadosMoveisDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button btnEnviarEmail;
+        private System.Windows.Forms.ComboBox cbMes;
     }
 }

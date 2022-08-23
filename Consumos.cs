@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Drawing;
-using System.Net.Mail;
 using System.Windows.Forms;
 using System.Diagnostics;
 
@@ -30,12 +29,14 @@ namespace Consumos_Telemóveis
             txtNome.Text = Telemoveis.Nome;
             txtNumero.Text = Telemoveis.NumeroTelemovel;
             txtEmail.Text = Telemoveis.Email;
-            txtMes.Text = Telemoveis.Mes;
+            cbMes.Text = Telemoveis.Mes;
             txtLimiteConsumoMinutos.Text = limiteConsumoMinutos.ToString();
             txtLimiteConsumoDadosMoveis.Text = limiteConsumoDadosMoveis.ToString();
 
             this.consumosTableAdapter.FillByIdTelemovel(this.dbConsumosTelemoveisDataSet.consumos, Int32.Parse(txtIdTelemovel.Text));
             consumosTableAdapter.GetDataByIdTelemovel(Int32.Parse(txtIdTelemovel.Text));
+
+            dataGridView1.CurrentCellChanged += dataGridView1_SelectionChanged;
         }
 
         private void Editar(bool editando)
@@ -48,6 +49,9 @@ namespace Consumos_Telemóveis
                 tsbSalvar.Enabled = true;
                 tsbEliminar.Enabled = true;
                 tsbCancelar.Enabled = true;
+
+                txtConsumoMinutos.ReadOnly = false;
+                txtConsumoDadosMoveis.ReadOnly = false;
             }
             else
             {
@@ -57,6 +61,9 @@ namespace Consumos_Telemóveis
                 tsbSalvar.Enabled = false;
                 tsbEliminar.Enabled = false;
                 tsbCancelar.Enabled = false;
+
+                txtConsumoMinutos.ReadOnly = true;
+                txtConsumoDadosMoveis.ReadOnly = true;
             }
         }
 
@@ -66,7 +73,7 @@ namespace Consumos_Telemóveis
             nome = txtNome.Text;
             email = txtEmail.Text;
             numeroTelemovel = txtNumero.Text;
-            mes = txtMes.Text;
+            mes = cbMes.Text;
             consumosMinutos = txtConsumoMinutos.Text;
             dadosMoveis = txtConsumoDadosMoveis.Text;
 
@@ -76,7 +83,7 @@ namespace Consumos_Telemóveis
             dataGridView1.DataSource = consumosTableAdapter.GetDataByIdTelemovel(idTelemovel);
             dataGridView1.Rows[dataGridView1.Rows.Count - 1].Selected = true;
             Editar(true);
-            txtMes.Focus();
+            cbMes.Focus();
 
 
         }
@@ -88,7 +95,7 @@ namespace Consumos_Telemóveis
             nome = txtNome.Text;
             email = txtEmail.Text;
             numeroTelemovel = txtNumero.Text;
-            mes = txtMes.Text;
+            mes = cbMes.Text;
             consumosMinutos = txtConsumoMinutos.Text;
             dadosMoveis = txtConsumoDadosMoveis.Text;
 
@@ -106,6 +113,8 @@ namespace Consumos_Telemóveis
             {
                 return;
             }
+
+            Editar(false);
         }
 
         private void tsbEliminar_Click(object sender, EventArgs e)
@@ -144,7 +153,9 @@ namespace Consumos_Telemóveis
             foreach (DataGridViewRow row in dataGridView1.SelectedRows)
             {
                 txtIdConsumo.Text = row.Cells[0].Value.ToString();
-                txtMes.Text = row.Cells[4].Value.ToString();
+                cbMes.Text = row.Cells[4].Value.ToString();
+                txtConsumoMinutos.Text = row.Cells[5].Value.ToString();
+                txtConsumoDadosMoveis.Text = row.Cells[6].Value.ToString();
             }
         }
 
@@ -176,7 +187,6 @@ namespace Consumos_Telemóveis
             {
                 if (Int32.Parse(txtConsumoDadosMoveis.Text) > limiteConsumoDadosMoveis)
                 {
-
                     txtConsumoDadosMoveis.BackColor = Color.Red;
                     txtConsumoDadosMoveis.ForeColor = Color.White;
                 }
@@ -199,7 +209,7 @@ namespace Consumos_Telemóveis
             email = txtEmail.Text.Trim();
             email.Replace(" ", "");
             numeroTelemovel = txtNumero.Text;
-            mes = txtMes.Text;
+            mes = cbMes.Text;
             limiteConsumoDadosMoveis = Int32.Parse(txtLimiteConsumoDadosMoveis.Text);
             limiteConsumoMinutos = Int32.Parse(txtLimiteConsumoMinutos.Text);
             dadosMoveis = txtConsumoDadosMoveis.Text;

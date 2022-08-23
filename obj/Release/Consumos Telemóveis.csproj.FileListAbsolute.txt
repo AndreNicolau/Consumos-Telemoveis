@@ -14,19 +14,3 @@ C:\Users\andre\source\repos\Consumos Telemóveis\obj\Release\Consumos Telemóvei
 C:\Users\andre\source\repos\Consumos Telemóveis\obj\Release\Consumos Telemóveis.csproj.CopyComplete
 C:\Users\andre\source\repos\Consumos Telemóveis\obj\Release\Consumos Telemóveis.exe
 C:\Users\andre\source\repos\Consumos Telemóveis\obj\Release\Consumos Telemóveis.pdb
-C:\Users\andre\source\repos\AndreNicolau\Consumos-Telemoveis\bin\Release\Consumos Telemóveis.exe.config
-C:\Users\andre\source\repos\AndreNicolau\Consumos-Telemoveis\bin\Release\Consumos Telemóveis.exe
-C:\Users\andre\source\repos\AndreNicolau\Consumos-Telemoveis\bin\Release\Consumos Telemóveis.pdb
-C:\Users\andre\source\repos\AndreNicolau\Consumos-Telemoveis\bin\Release\BouncyCastle.Crypto.dll
-C:\Users\andre\source\repos\AndreNicolau\Consumos-Telemoveis\bin\Release\itextsharp.dll
-C:\Users\andre\source\repos\AndreNicolau\Consumos-Telemoveis\bin\Release\itextsharp.xml
-C:\Users\andre\source\repos\AndreNicolau\Consumos-Telemoveis\obj\Release\Consumos Telemóveis.csproj.AssemblyReference.cache
-C:\Users\andre\source\repos\AndreNicolau\Consumos-Telemoveis\obj\Release\Consumos Telemóveis.csproj.SuggestedBindingRedirects.cache
-C:\Users\andre\source\repos\AndreNicolau\Consumos-Telemoveis\obj\Release\Consumos_Telemóveis.Consumos.resources
-C:\Users\andre\source\repos\AndreNicolau\Consumos-Telemoveis\obj\Release\Consumos_Telemóveis.Telemoveis.resources
-C:\Users\andre\source\repos\AndreNicolau\Consumos-Telemoveis\obj\Release\Consumos_Telemóveis.Properties.Resources.resources
-C:\Users\andre\source\repos\AndreNicolau\Consumos-Telemoveis\obj\Release\Consumos Telemóveis.csproj.GenerateResource.cache
-C:\Users\andre\source\repos\AndreNicolau\Consumos-Telemoveis\obj\Release\Consumos Telemóveis.csproj.CoreCompileInputs.cache
-C:\Users\andre\source\repos\AndreNicolau\Consumos-Telemoveis\obj\Release\Consumos Telemóveis.csproj.CopyComplete
-C:\Users\andre\source\repos\AndreNicolau\Consumos-Telemoveis\obj\Release\Consumos Telemóveis.exe
-C:\Users\andre\source\repos\AndreNicolau\Consumos-Telemoveis\obj\Release\Consumos Telemóveis.pdb
