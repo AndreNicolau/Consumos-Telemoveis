@@ -1,7 +1,7 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
-using System.Diagnostics;
 
 namespace Consumos_Telemóveis
 {
@@ -50,6 +50,8 @@ namespace Consumos_Telemóveis
                 tsbEliminar.Enabled = true;
                 tsbCancelar.Enabled = true;
 
+                cbMes.Enabled = true;
+
                 txtConsumoMinutos.ReadOnly = false;
                 txtConsumoDadosMoveis.ReadOnly = false;
             }
@@ -61,6 +63,8 @@ namespace Consumos_Telemóveis
                 tsbSalvar.Enabled = false;
                 tsbEliminar.Enabled = false;
                 tsbCancelar.Enabled = false;
+
+                cbMes.Enabled = false;
 
                 txtConsumoMinutos.ReadOnly = true;
                 txtConsumoDadosMoveis.ReadOnly = true;

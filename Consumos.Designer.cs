@@ -69,9 +69,9 @@
             this.txtLimiteConsumoDadosMoveis = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.cbMes = new System.Windows.Forms.ComboBox();
             this.btnEnviarEmail = new System.Windows.Forms.Button();
             this.consumosTableAdapter = new Consumos_Telemóveis.DbConsumosTelemoveisDataSetTableAdapters.consumosTableAdapter();
-            this.cbMes = new System.Windows.Forms.ComboBox();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.consumosBindingSource)).BeginInit();
@@ -355,7 +355,7 @@
             this.txtConsumoMinutos.MaxLength = 20;
             this.txtConsumoMinutos.Name = "txtConsumoMinutos";
             this.txtConsumoMinutos.ReadOnly = true;
-            this.txtConsumoMinutos.Size = new System.Drawing.Size(100, 26);
+            this.txtConsumoMinutos.Size = new System.Drawing.Size(112, 26);
             this.txtConsumoMinutos.TabIndex = 16;
             this.txtConsumoMinutos.Text = "0";
             this.txtConsumoMinutos.TextChanged += new System.EventHandler(this.txtConsumoMinutos_TextChanged);
@@ -367,7 +367,7 @@
             this.txtConsumoDadosMoveis.MaxLength = 20;
             this.txtConsumoDadosMoveis.Name = "txtConsumoDadosMoveis";
             this.txtConsumoDadosMoveis.ReadOnly = true;
-            this.txtConsumoDadosMoveis.Size = new System.Drawing.Size(100, 26);
+            this.txtConsumoDadosMoveis.Size = new System.Drawing.Size(112, 26);
             this.txtConsumoDadosMoveis.TabIndex = 17;
             this.txtConsumoDadosMoveis.Text = "0";
             this.txtConsumoDadosMoveis.TextChanged += new System.EventHandler(this.txtDados_TextChanged);
@@ -492,13 +492,36 @@
             this.groupBox3.TabIndex = 21;
             this.groupBox3.TabStop = false;
             // 
+            // cbMes
+            // 
+            this.cbMes.Enabled = false;
+            this.cbMes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cbMes.Items.AddRange(new object[] {
+            "1-janeiro",
+            "2-fevereiro",
+            "3-março",
+            "4-abril",
+            "5-maio",
+            "6-junho",
+            "7-julho",
+            "8-agosto",
+            "9-setembro",
+            "10-outubro",
+            "11-novembro",
+            "12-dezembro"});
+            this.cbMes.Location = new System.Drawing.Point(10, 43);
+            this.cbMes.Name = "cbMes";
+            this.cbMes.Size = new System.Drawing.Size(112, 28);
+            this.cbMes.TabIndex = 22;
+            this.cbMes.Text = "1-janeiro";
+            // 
             // btnEnviarEmail
             // 
             this.btnEnviarEmail.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnEnviarEmail.AutoSize = true;
             this.btnEnviarEmail.Location = new System.Drawing.Point(6, 182);
             this.btnEnviarEmail.Name = "btnEnviarEmail";
-            this.btnEnviarEmail.Size = new System.Drawing.Size(106, 30);
+            this.btnEnviarEmail.Size = new System.Drawing.Size(118, 30);
             this.btnEnviarEmail.TabIndex = 22;
             this.btnEnviarEmail.Text = "Enviar Email";
             this.btnEnviarEmail.UseVisualStyleBackColor = true;
@@ -507,29 +530,6 @@
             // consumosTableAdapter
             // 
             this.consumosTableAdapter.ClearBeforeFill = true;
-            // 
-            // cbMes
-            // 
-            this.cbMes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cbMes.FormattingEnabled = true;
-            this.cbMes.Items.AddRange(new object[] {
-            "janeiro",
-            "fevereiro",
-            "março",
-            "abril",
-            "maio",
-            "junho",
-            "julho",
-            "agosto",
-            "setembro",
-            "outubro",
-            "novembro",
-            "dezembro"});
-            this.cbMes.Location = new System.Drawing.Point(10, 43);
-            this.cbMes.Name = "cbMes";
-            this.cbMes.Size = new System.Drawing.Size(100, 28);
-            this.cbMes.TabIndex = 22;
-            this.cbMes.Text = "janeiro";
             // 
             // Consumos
             // 
