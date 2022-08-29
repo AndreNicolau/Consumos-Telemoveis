@@ -30,3 +30,19 @@ C:\Users\andre\source\repos\AndreNicolau\Consumos-Telemoveis\obj\Release\Consumo
 C:\Users\andre\source\repos\AndreNicolau\Consumos-Telemoveis\obj\Release\Consumos Telemóveis.csproj.CopyComplete
 C:\Users\andre\source\repos\AndreNicolau\Consumos-Telemoveis\obj\Release\Consumos Telemóveis.exe
 C:\Users\andre\source\repos\AndreNicolau\Consumos-Telemoveis\obj\Release\Consumos Telemóveis.pdb
+C:\Users\Nicolau\Documents\GitHub\Consumos-Telemoveis\bin\Release\Consumos Telemóveis.exe.config
+C:\Users\Nicolau\Documents\GitHub\Consumos-Telemoveis\bin\Release\Consumos Telemóveis.exe
+C:\Users\Nicolau\Documents\GitHub\Consumos-Telemoveis\bin\Release\Consumos Telemóveis.pdb
+C:\Users\Nicolau\Documents\GitHub\Consumos-Telemoveis\bin\Release\BouncyCastle.Crypto.dll
+C:\Users\Nicolau\Documents\GitHub\Consumos-Telemoveis\bin\Release\itextsharp.dll
+C:\Users\Nicolau\Documents\GitHub\Consumos-Telemoveis\bin\Release\itextsharp.xml
+C:\Users\Nicolau\Documents\GitHub\Consumos-Telemoveis\obj\Release\Consumos Telemóveis.csproj.AssemblyReference.cache
+C:\Users\Nicolau\Documents\GitHub\Consumos-Telemoveis\obj\Release\Consumos Telemóveis.csproj.SuggestedBindingRedirects.cache
+C:\Users\Nicolau\Documents\GitHub\Consumos-Telemoveis\obj\Release\Consumos_Telemóveis.Consumos.resources
+C:\Users\Nicolau\Documents\GitHub\Consumos-Telemoveis\obj\Release\Consumos_Telemóveis.Telemoveis.resources
+C:\Users\Nicolau\Documents\GitHub\Consumos-Telemoveis\obj\Release\Consumos_Telemóveis.Properties.Resources.resources
+C:\Users\Nicolau\Documents\GitHub\Consumos-Telemoveis\obj\Release\Consumos Telemóveis.csproj.GenerateResource.cache
+C:\Users\Nicolau\Documents\GitHub\Consumos-Telemoveis\obj\Release\Consumos Telemóveis.csproj.CoreCompileInputs.cache
+C:\Users\Nicolau\Documents\GitHub\Consumos-Telemoveis\obj\Release\Consumos Telemóveis.csproj.CopyComplete
+C:\Users\Nicolau\Documents\GitHub\Consumos-Telemoveis\obj\Release\Consumos Telemóveis.exe
+C:\Users\Nicolau\Documents\GitHub\Consumos-Telemoveis\obj\Release\Consumos Telemóveis.pdb
