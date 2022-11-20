@@ -39,9 +39,9 @@ namespace Consumos_Telemóveis
             dataGridView1.CurrentCellChanged += dataGridView1_SelectionChanged;
         }
 
-        private void Editar(bool editando)
+        private void Editar(bool modoEdicao)
         {
-            if (editando)
+            if (modoEdicao)
             {
                 tsbEditar.Enabled = false;
                 tsbNovo.Enabled = false;
