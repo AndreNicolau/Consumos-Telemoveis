@@ -1,6 +1,6 @@
 # Consumos-Telemoveis
 
-Programa desenvolvido durante o meu estágio na Junta de Freguesia Avenidas Novas [https://www.jf-avenidasnovas.pt/], com o objetivo de registar os consumos dos dispositivos móveis fornecidos pela Junta aos seus funcionários.
+Programa desenvolvido durante o meu estágio na [Junta de Freguesia Avenidas Novas](https://www.jf-avenidasnovas.pt/), com o objetivo de registar os consumos dos dispositivos móveis fornecidos pela Junta aos seus funcionários.
 
 Este programa conta com as seguintes funcionalidades:
 - Registo de funcionários (nome, email, nº telemóvel)
