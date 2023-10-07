@@ -88,8 +88,6 @@ namespace Consumos_Telemóveis
             dataGridView1.Rows[dataGridView1.Rows.Count - 1].Selected = true;
             Editar(true);
             cbMes.Focus();
-
-
         }
 
         private void tsbSalvar_Click(object sender, EventArgs e)
@@ -224,7 +222,6 @@ namespace Consumos_Telemóveis
 
             string mensagem = $"                                                                                                            (Comunicação Interna - Confidencial){lineBreak + lineBreak + lineBreak}Para os devidos efeitos informa - se que nos termos do contrato em vigor, encontra - se contratualizado para o n.º de telemóvel {numeroTelemovel}, que lhe está atrubuído o seguinte plafond:{lineBreak}    - {limiteConsumoMinutos} minutos chamadas; {lineBreak}    - {limiteConsumoDadosMoveis} Kb de Internet {lineBreak + lineBreak}Os gastos com o referido telemóvel para o mês de {mes} foram os seguintes:{lineBreak}   - {consumosMinutos} minutos chamadas; {lineBreak}   - {dadosMoveis} Kb de Internet; {lineBreak + lineBreak}Avenidas Novas, {DateTime.Now.ToString("dd/MM/yyyy")}. {lineBreak + lineBreak}(Informação gerada automaticamente a partir da Base de Dados de Gestão de Telemóveis)";
             string subject = "Consumos Telemóveis";
-
 
             Process.Start($"mailto: {email}?subject={subject} &body={mensagem}");
         }
