@@ -103,6 +103,7 @@ namespace Consumos_Telemóveis
             consumosMinutos = txtConsumoMinutos.Text;
             dadosMoveis = txtConsumoDadosMoveis.Text;
 
+            // check if user really wants to register s new consumption 
             string mensagem = "Tem a certeza que deseja inserir este registo?";
             string legenda = "Inserir registo";
             MessageBoxButtons butoes = MessageBoxButtons.YesNo;
